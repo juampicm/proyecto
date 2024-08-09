@@ -11,15 +11,15 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo-container">
-            <img src="./assets/img/logo.png" alt="logo" class="logo">
-            <div class="logo-text">
-                <a href="#hero">
+        <a href="#hero">
+            <div class="logo-container">
+                <img src="./assets/img/logo.png" alt="logo" class="logo">
+                <div class="logo-text">
                     <h2>Riqueza Digital</h2>
                     <p>Lo bueno del conocimiento</p>
-                </a>
+                </div>
             </div>
-        </div>
+        </a>
         <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
         <input type="checkbox" id="toggle-menu">
         <nav class="navbar">
@@ -33,6 +33,7 @@
                 <li><a href="#">
                     <button class="register-btn">Registrarme</button>
                 </a></li>
+            </ul>
         </nav>
     </header>
 
@@ -59,7 +60,7 @@
                 <div class="referent-card">
                     <div class="referent-img"></div>
                     <div class="referent-info">
-                        <h3>Warren Buffet</h3>
+                        <h3>Warren <span>Buffet</span></h3>
                         <p>Conocido como el "Oráculo de Omaha", Buffett es uno de los inversores más exitosos de todos los tiempos. CEO de Berkshire Hathaway, su enfoque en la inversión a largo plazo en empresas sólidas con ventajas competitivas duraderas lo ha convertido en una figura legendaria en Wall Street.</p>
                     </div>
                 </div>
@@ -73,14 +74,14 @@
                 <div class="referent-card">
                     <div class="referent-img"></div>
                     <div class="referent-info">
-                        <h3>George Soros</h3>
+                        <h3>George <span>Soros</span></h3>
                         <p>Famoso por su apuesta contra la libra esterlina en 1992, que le generó más de mil millones de dólares en un solo día, Soros es conocido por su enfoque en la macroeconomía global y su capacidad para anticipar movimientos del mercado.</p>
                     </div>
                 </div>
                 <div class="referent-card">
                     <div class="referent-img"></div>
                     <div class="referent-info">
-                        <h3>Peter Lynch</h3>
+                        <h3>Peter <span>Lynch</span></h3>
                         <p>Como gestor del fondo Magellan de Fidelity, Lynch logró un rendimiento anualizado del 29% durante 13 años, desde 1977 hasta 1990. Es conocido por su filosofía de "invertir en lo que conoces" y su enfoque en encontrar empresas de crecimiento subestimadas.</p>
                     </div>
                 </div>
@@ -142,7 +143,7 @@
                         </div>
                         <div class="numeroTelefono-form">
                             <label for="numeroTelefono">Número de celular</label>
-                            <input type="text" id="numeroTelefono" placeholder="Introducí tu número con código de area" required>
+                            <input type="text" id="numeroTelefono" placeholder="Agregá el código de area" required>
                         </div>
                         <div class="consulta-form">
                             <label for="consulta">Consulta</label>
