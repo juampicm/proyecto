@@ -28,6 +28,13 @@ body {
     max-width: 1400px;
 }
 
+.section-title {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 button {
     background: goldenrod;
     width: 180px;
@@ -196,7 +203,9 @@ button:hover {
 
 .hero-text {
     color: black;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .hero-text h1 {
@@ -216,9 +225,18 @@ button:hover {
     background-size: cover;
 }
 
+#about {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #referents {
     flex-direction: column;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .divider {
@@ -226,13 +244,6 @@ button:hover {
     width: 100%;
     background: black;
     margin-bottom: 30px;
-}
-
-.title-referents,
-.title-about-me {
-    color: black;
-    font-size: 30px;
-    margin-bottom: 20px;
 }
 
 .referents-cards-container {
@@ -254,9 +265,24 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 20px;
     border-radius: .5rem;
-    border: 3px solid rgb(150, 109, 6);
+    border: 2px solid black;
+    transition: all .3s linear;
+}
+
+.referent-card:hover {
+    box-shadow: 0 12px 6px -4px rgba(0, 0, 0, 0.5);
+}
+
+.referent-img-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(150, 109, 6);
+    padding: 15px 0 15px 0;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
 }
 
 .referent-img {
@@ -268,24 +294,28 @@ button:hover {
     background-size: cover;
 }
 
-.referent-card:first-child > .referent-img {
+.referent-card:first-child > .referent-img-container > .referent-img {
     background-image: url(../img/warren-buffett.webp);
 }
 
-.referent-card:nth-child(2) > .referent-img {
+.referent-card:nth-child(2) > .referent-img-container > .referent-img {
     background-image: url(../img/Benjamin-Graham-Quién-fue-biografía-educación-aportaciones-obras.jpeg);
 }
 
-.referent-card:nth-child(3) > .referent-img{
+.referent-card:nth-child(3) > .referent-img-container > .referent-img {
     background-image: url(../img/george-in-action.jpg);
 }
 
-.referent-card:nth-child(4) > .referent-img {
+.referent-card:nth-child(4) > .referent-img-container > .referent-img {
     background-image: url(../img/zbimg_2987503_800.jpg);
 }
 
-.referent-card:nth-child(5) > .referent-img {
+.referent-card:nth-child(5) > .referent-img-container > .referent-img {
     background-image: url(../img/Sir-John-3-1-257x300.jpg);
+}
+
+.referent-card:last-child > .referent-img-container > .referent-img {
+    background-image: url(../img/gratis-png-apuntar-el-arte-del-dedo-dedo-indice-dedo-removebg-preview.png);
 }
 
 .referent-card:last-child > .referent-info {
@@ -302,23 +332,21 @@ button:hover {
     font-size: 16px;
 }
 
-.referent-card:last-child > .referent-img {
-    background-image: url(../img/gratis-png-apuntar-el-arte-del-dedo-dedo-indice-dedo-removebg-preview.png);
-}
-
 .referent-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 50%;
+    width: 70%;
+    padding: 15px 20px 15px 20px;
 }
 
 .referent-info h3 {
     color: white;
+    font-size: 20px;
 }
 
 .referent-info p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -595,15 +623,20 @@ button:hover {
         width: 100%;
     }
 
-    .hero-text-container h1 {
+    .hero-text h1 {
         font-size: 35px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        padding: 0 10px;
     }
 
     .hero-img {
         display: none;
     }
 
-    .title-referents {
+    .section-title {
         width: 100%;
         font-size: 20px;
         text-align: center;
@@ -612,7 +645,6 @@ button:hover {
     .referent-card {
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
     }
 
     .referent-card h3 {
@@ -638,6 +670,11 @@ button:hover {
         font-size: 12px;
     }
 
+    .referent-img-container {
+        width: 100%;
+        border-radius: .5rem .5rem 0 0;
+    }
+
     .referent-img {
         width: 100px;
         height: 100px;
@@ -646,6 +683,7 @@ button:hover {
     .referent-info {
         width: 100%;
         gap: 10px;
+        padding: 0 15px 10px 15px;
     }
 
     .about-me-container {
